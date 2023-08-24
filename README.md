@@ -1,12 +1,14 @@
 # project-starter-aws
+```
+# project-starter-aws
 Endpoint & port
 Endpoint
-auth-api.cmfeeofluzqg.ap-southeast-1.rds.amazonaws.com
+authapi.cmfeeofluzqg.ap-southeast-1.rds.amazonaws.com
 Port
 5432
 
 psql --host <endpoint> --username <username>
-psql --host auth-api.cmfeeofluzqg.ap-southeast-1.rds.amazonaws.com --username postgres
+psql --host authapi.cmfeeofluzqg.ap-southeast-1.rds.amazonaws.com --username postgres
 
 brew services start postgresql@15
 brew link postgresql@15 --force
@@ -14,3 +16,4 @@ brew services restart postgresql
 pgrep -l postgres
 
 LC_ALL="C" /usr/local/opt/postgresql@15/bin/postgres -D /usr/local/var/postgresql@15
+```
