@@ -10,6 +10,8 @@ Port
 psql --host <endpoint> --username <username>
 psql --host authapi.cmfeeofluzqg.ap-southeast-1.rds.amazonaws.com --username postgres
 
+CREATE DATABASE authapi; CREATE DATABASE authapi_test;
+
 brew services start postgresql@15
 brew link postgresql@15 --force
 brew services restart postgresql
