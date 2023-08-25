@@ -19,6 +19,10 @@ git remote add origin <remote repository URL>
 git remote add origin https://github.com/dimasmd/auth-api.git
 git push origin master
 
+git checkout -b feature-say-hello-world
+git add .
+git commit -m "add say hello world test case"
+git push origin feature-say-hello-world 
 
 brew services start postgresql@15
 brew link postgresql@15 --force
