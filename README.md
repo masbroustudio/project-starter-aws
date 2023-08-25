@@ -23,7 +23,7 @@ git checkout master
 
 git add .
 git commit -m "add cd action"
-git push origin master
+git push origin main
 
 
 brew services start postgresql@15
