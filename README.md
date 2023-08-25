@@ -19,6 +19,12 @@ git remote add origin <remote repository URL>
 git remote add origin https://github.com/dimasmd/auth-api.git
 git push origin master
 
+git checkout master
+
+git add .
+git commit -m "add cd action"
+git push origin master
+
 
 brew services start postgresql@15
 brew link postgresql@15 --force
