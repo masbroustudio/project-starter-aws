@@ -32,8 +32,8 @@ Mengonfigurasi EC2 Instances dan Menjalankan Auth API
 
 ssh -i "<key>.pem" ubuntu@alamat instance EC2 lengkap ip4 public
 
-ssh -i "auth-api-app-server.pem" ubuntu@ec2-13-215-208-126.ap-southeast-1.compute.amazonaws.com
-ssh -i "auth-api-app-server.pem" ubuntu@13.215.208.126
+ssh -i "....................pem" ubuntu@".....................amazonaws.com
+ssh -i ""....................pem" ubuntu@"....................ipaddress
 
 pm2 start npm --name "auth-api" -- run "start"
 
