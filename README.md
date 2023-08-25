@@ -24,6 +24,12 @@ git add .
 git commit -m "add say hello world test case"
 git push origin feature-say-hello-world 
 
+git checkout master
+
+git add .
+git commit -m "add cd action"
+git push origin master
+
 brew services start postgresql@15
 brew link postgresql@15 --force
 brew services restart postgresql
