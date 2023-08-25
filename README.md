@@ -26,4 +26,36 @@ brew services restart postgresql
 pgrep -l postgres
 
 LC_ALL="C" /usr/local/opt/postgresql@15/bin/postgres -D /usr/local/var/postgresql@15
+
+
+Mengonfigurasi EC2 Instances dan Menjalankan Auth API
+
+ssh -i "<key>.pem" ubuntu@alamat instance EC2 lengkap ip4 public
+
+ssh -i "auth-api-app-server.pem" ubuntu@ec2-13-215-208-126.ap-southeast-1.compute.amazonaws.com
+ssh -i "auth-api-app-server.pem" ubuntu@13.215.208.126
+
+pm2 start npm --name "auth-api" -- run "start"
+
+JIka tidak bisa konek utk Windows : baca https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html
+
+
+$path = ".\auth-api-app-server.pem"
+# Reset to remove explicit permissions
+icacls.exe $path /reset
+# Give current user explicit read-permission
+icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
+# Disable inheritance and remove inherited permissions
+icacls.exe $path /inheritance:r
+
+
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+git add .
+git commit -m "add ci action"
+git push origin master
+
+
+
 ```
